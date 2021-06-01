@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_click"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="4dp"
+    android:clickable="true"
+
+    android:focusable="true"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="3.3dp">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/open_sans"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="-------"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+
+            app:fontFamily="@font/poppins" />
+
+        <TextView
+            android:id="@+id/tv_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/open_sans"
+            android:text="-------"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="11sp"
+
+            app:fontFamily="@font/poppins" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_baseline_north_east_24" />
+
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/backk"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back_arrow_white"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:id="@+id/tv_mobileverification"
+            android:layout_marginLeft="10dp"
+            android:text="Mobile Verification"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mobileotp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Mobile Verification"
+            android:textAlignment="center"
+            android:fontFamily="@font/montseerat"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="27sp" />
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_gravity="center"
+            android:layout_width="85dp"
+            android:id="@+id/verified"
+            android:layout_height="85dp"
+            android:src="@drawable/otp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tv_type_verification"
+            android:text="Please Wait while we fetch the Verification code"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            >
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminateTint="@color/white"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="5s"
+                android:id="@+id/tv_sec"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/otp_view"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            app:height="40dp"
+            app:width="40dp"
+            app:otp_box_background="@color/white"
+            app:bar_height="2dp"
+            app:length="4"
+            app:otp_text_size="24dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tv_mobile_verification"
+            android:layout_marginTop="25dp"
+            android:text="Account Created Successfully"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:textSize="24sp" />
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="85dp"
+            android:layout_height="85dp">
+            <ImageView
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/circl"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_gravity="center"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:src="@drawable/success"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Your Account has been successfully created. \n Enjoy shopping with JuttiBazaar"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

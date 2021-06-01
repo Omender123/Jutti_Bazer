@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jutti.bazaar.shop.shoe.shopping">
+
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA2" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Activities.BecomeAgent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.OrderTracking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Search.Search"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.razorpay.CheckoutActivity"
+            android:screenOrientation="portrait"
+            android:keepScreenOn="true"/>
+        <activity
+            android:name=".Web_view"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Webb" />
+        <activity
+            android:name=".Activities.Add_Address"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Product_list.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Welcome.WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Model.Brand_selction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Orders_details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.OrdersList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".Product_list.SubcategoryActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".FirebaseSection.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Login_Register.RegisterwholesellerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.Brand_list"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Login_Register.RegisterSellerActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.TermsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.About_Us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaygatewayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Product_list.Product_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.My_cart"
+            android:label="My Cart"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Home"
+            android:label="Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Product_details.Product_Details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Login_Register.OtpActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".Login_Register.LoginActivity" />
+        <activity android:name=".Activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Product_details.ZoomSliderImageActivivty" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "242559279129",
+    "firebase_url": "https://juttibazaar-bf551.firebaseio.com",
+    "project_id": "juttibazaar-bf551",
+    "storage_bucket": "juttibazaar-bf551.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242559279129:android:3c654a2744c96aea1f4a88",
+        "android_client_info": {
+          "package_name": "com.jutti.bazaar.shop.shoe.shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242559279129-quj7msb2fd27vntir6mm264tn6g1bmfb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jutti.bazaar.shop.shoe.shopping",
+            "certificate_hash": "bbf5733e3b269896ec370eb9c703d6cc610376bd"
+          }
+        },
+        {
+          "client_id": "242559279129-pf6ofnbt6kl0lmnn54q9rmjop6fl6o27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzgjQUgSFgfvY8XtzhLSYcaoy6z8XpH70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242559279129-pf6ofnbt6kl0lmnn54q9rmjop6fl6o27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

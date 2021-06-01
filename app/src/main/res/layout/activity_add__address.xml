@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F3F3"
+    android:id="@+id/base_view"
+    android:layout_height="match_parent"
+    tools:context=".Cart.Address.Add_Address">
+    <LinearLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimaryDark"
+        android:padding="6dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back_mycart"
+            android:layout_width="26dp"
+            android:layout_height="match_parent"
+            android:tint="@color/white"
+            android:paddingLeft="1dp"
+            android:onClick="goBack"
+            android:layout_gravity="center_vertical"
+
+
+            android:src="@drawable/back_arrow_white" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Address"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            />
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="8dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@color/grey"
+                    android:textSize="12dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="1dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginLeft="1dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/grey"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:hint="Pincode*"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_locality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:gravity="center_vertical"
+                        android:hint="Address line 1*"
+                        android:inputType="text"
+
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:gravity="center_vertical"
+                        android:hint="Address lane 2*"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:gravity="center_vertical"
+                        android:hint="Address 2*"
+                        android:maxLength="50"
+                        android:inputType="text"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/grey"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:hint="City*"
+
+
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey"
+                            android:textSize="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="1dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_marginLeft="1dp"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/grey"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:hint="State*"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey"
+                            android:textSize="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Select State" />
+
+                <LinearLayout
+                    android:background="@drawable/rect_stroke"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_landmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:gravity="center_vertical"
+                        android:hint="Landmark (Optional)"
+                        android:inputType="text"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                    android:textColorHint="@color/grey"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:ems="10"
+                        android:hint="Mobile No*"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                    android:textColorHint="@color/grey"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:ems="10"
+                        android:hint="Name*"
+                        android:inputType="textMultiLine"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    >
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Area"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:text="City"
+                        android:textColor="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="bottom"
+                    android:weightSum="2"
+                    >
+                    <LinearLayout
+                        android:background="#E6E6E6"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="bottom"
+                        android:layout_marginRight="5dp"
+                        >
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Crossing Republik"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="#E6E6E6"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="bottom"
+                        android:layout_marginRight="5dp"
+                        >
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ghaziabad"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    >
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/colorPrimaryDark"
+                        />
+                    <View
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimaryDark"
+                        />
+                </TableRow>
+                ////////
+
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    >
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="State"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/grey"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:text="Pincode"
+                        android:textColor="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="bottom"
+                    android:weightSum="2"
+                    >
+                    <LinearLayout
+                        android:background="#E6E6E6"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="bottom"
+                        android:layout_marginRight="5dp"
+                        >
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Uttar Pardesh"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="#E6E6E6"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="bottom"
+                        android:layout_marginRight="5dp"
+                        >
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="201016"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </TableRow>
+                //////
+
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    >
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/colorPrimaryDark"
+                        />
+                    <View
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorPrimaryDark"
+                        />
+                </TableRow>
+
+
+
+                <TableRow
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E6E6E6"
+                    android:weightSum="2">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/grey"
+
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+                        <EditText
+                            android:id="@+id/et_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:hint="Area"
+                            android:text="Crossing Republik"
+                            android:editable="false"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey"
+                            android:textSize="12dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="bottom"
+                    android:weightSum="2">
+
+
+
+                    <Button
+                        android:id="@+id/bt_cancelbt"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:text="Cancel"
+                        android:onClick="cancel"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="5dp"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@color/grey"/>
+                    <Button
+                        android:id="@+id/bt_save"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:onClick="save_address"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"/>
+                </TableRow>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

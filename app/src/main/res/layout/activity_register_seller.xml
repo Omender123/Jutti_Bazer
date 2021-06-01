@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_splash"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B9715606"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:onClick="goBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="6dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/back_arrow_white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:text="Sell on CBS Kitchenware"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montseerat"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <RelativeLayout
+            android:id="@+id/ll_steps"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal">
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/topleftright_roundwhite">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="7dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_google"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:text="Fill in details below to proceed"
+                        android:textColor="@color/colorPrimaryDark" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ph_profile"
+                                    android:layout_gravity="center"/>
+                                <EditText
+                                    android:id="@+id/et_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="Name"
+                                    android:inputType="textPersonName"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/et_FindNOpenCBS"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="Email (Optional)"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/et_mobile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_shapes_capsule_sh"
+
+                                        android:hint="Enter Phone No."
+                                        android:inputType="phone"
+                                        android:maxLength="10"
+                                        android:maxLines="1"
+
+                                        android:padding="7dp"
+                                        android:singleLine="true"
+                                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                        android:textColor="@color/grey"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="*Please verify Phone no. to register"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="11dp" />
+
+                                <EditText
+                                    android:id="@+id/et_whatsapp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="Whatsapp No. (Optional) "
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/et_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="Address"
+                                    android:inputType="textPostalAddress"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/et_city"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="City"
+                                    android:inputType="textPostalAddress"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/et_state"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="State"
+                                    android:inputType="textPostalAddress"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/et_pin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="Pin Code"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+                                    android:singleLine="true"
+
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/et_comp_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="Company name"
+                                    android:inputType="textPostalAddress"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatCheckBox
+                                    android:id="@+id/gst"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="GST No."
+                                    android:visibility="gone" />
+
+                                <EditText
+                                    android:id="@+id/etgst"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/btn_shapes_capsule_sh"
+
+                                    android:hint="Add Gst No. (optional)"
+                                    android:inputType="textPostalAddress"
+                                    android:maxLines="1"
+                                    android:padding="7dp"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                                    android:textColor="@color/grey"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/swipe_bg_primary"
+                        android:text="Submit"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/grey"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="OR"
+                            android:textColor="@color/colorPrimary" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@color/grey"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:onClick="FindNOpenCBS"
+                            android:src="@drawable/getit" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:onClick="FindNOpenCBS"
+                                android:src="@drawable/cbs_logo" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:onClick="FindNOpenCBS"
+                                android:src="@drawable/ic_whatsapp"
+                                android:text="Download CBS Seller App from Google Play Store"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_register_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/btn_reg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3dp"
+                            android:background="#d69601"
+                            android:text="REGISTER"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_shiftlogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="2dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Already have an Account?"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="Login"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textStyle="bold"
+                                android:typeface="monospace" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circl"
+            android:padding="5dp"
+            android:src="@drawable/ic_launcher_round" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

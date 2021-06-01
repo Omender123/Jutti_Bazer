@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="15dp"
+
+    app:cardCornerRadius="2dp"
+    android:id="@+id/llclick"
+    android:layout_marginLeft="2dp"
+    android:layout_marginBottom="2dp"
+
+    android:layout_marginRight="2dp"
+    android:elevation="3dp"
+
+    android:layout_gravity="center"
+    android:background="@drawable/rect_grey"
+ >
+
+
+
+
+        <TextView
+        android:id="@+id/tv_size"
+
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+
+        android:layout_height="match_parent"
+            android:textSize="13dp"
+        android:textColor="@color/black"
+        android:text="_"/>
+
+
+</androidx.cardview.widget.CardView>

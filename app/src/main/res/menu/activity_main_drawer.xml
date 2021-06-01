@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Brand"
+            android:title="Brands" />
+        <item
+            android:id="@+id/Products"
+
+            android:title="Products" />
+        <item
+            android:id="@+id/Category"
+
+            android:title="Categories" />
+
+    </group>
+
+    <item android:title="More">
+        <menu>
+            <item
+                android:visible="false"
+                android:id="@+id/nav_home"
+                android:title="@string/menu_home" />
+
+            <item
+                android:id="@+id/MyCart"
+                android:icon="@drawable/ic_cart"
+                android:title="My Cart" />
+            <item
+                android:id="@+id/nav_orders"
+                android:icon="@drawable/order"
+                android:iconTint="@color/black"
+                android:title="My Order" />
+            <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/feedback"
+                android:iconTint="@color/black"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/share"
+                android:iconTint="@color/black"
+                android:title="Invite friends" />
+            <item
+                android:id="@+id/AboutUs"
+                android:icon="@drawable/home"
+                android:title="About us" />
+            <item
+                android:id="@+id/Logout"
+                android:icon="@drawable/ico_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+
+
+
+
+
+
+    <group android:checkableBehavior="single">
+    </group>
+
+
+    <item android:title="Business with us">
+        <menu>
+
+            <item
+                android:id="@+id/seller"
+                android:icon="@drawable/ic_sellr"
+                android:title="Sell on JuttiBazaar" />
+            <item
+
+                android:id="@+id/Agent"
+                android:icon="@drawable/ic_whol"
+                android:title="Become Agent" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.BecomeAgent">
+
+    <LinearLayout
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="26dp"
+            android:layout_height="match_parent"
+            android:onClick="goBack"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="1dp"
+            android:tint="@color/black"
+
+
+            app:srcCompat="@drawable/back_arrow_white" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="Become Agent"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSubmitted"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="200dp"
+
+            android:layout_gravity="center"
+            android:src="@drawable/dialog_check"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="Your request to become agent is under review"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/black"
+                android:text="Fill form below to become an agent." />
+
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Enter your full name"
+                android:inputType="textPersonName"
+                android:textSize="13dp" />
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+                android:textSize="13dp" />
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Enter your address"
+                android:inputType="textMultiLine"
+                android:textSize="13dp" />
+            <EditText
+                android:id="@+id/etAadhar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Enter your Aadhar number"
+                android:inputType="number"
+                android:textSize="13dp" />
+            <EditText
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Enter your city"
+                android:inputType="text"
+                android:textSize="13dp" />
+            <EditText
+                android:id="@+id/etPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Enter Pin code"
+                android:inputType="number"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="12dp"
+                android:text="Fill bank details below" />
+
+            <EditText
+                android:id="@+id/etBankName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Bank name"
+                android:inputType="text"
+                android:textSize="13dp" />
+            <EditText
+                android:id="@+id/etBankHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Account holder name"
+                android:inputType="text"
+                android:textSize="13dp" />
+            <EditText
+                android:id="@+id/etAccountNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="Enter account number"
+                android:inputType="number"
+                android:maxLength="16"
+                android:textSize="13dp" />
+            <EditText
+                android:id="@+id/etIfsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:paddingTop="@dimen/_15sdp"
+                android:hint="IFSC code"
+                android:inputType="textPersonName"
+                android:textSize="13dp" />
+
+
+            <Button
+                android:id="@+id/bt_save"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:text="Save"
+                android:onClick="saveForm"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:textAllCaps="false"/>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+</layout>

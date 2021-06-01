@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#fff"
+    android:elevation="12dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_sans"
+                android:paddingLeft="15dp"
+                android:paddingRight="35dp"
+                android:text="Are you sure to cancel order ?"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="6dp"
+                android:padding="4dp"
+                android:src="@drawable/close_black_24dp"
+                android:tint="@color/grey"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/open_sans"
+                android:paddingRight="35dp"
+
+                android:text="Reason "
+                android:textColor="@color/dark_grey"
+                android:textSize="10dp"
+
+
+                />
+
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/iv_image"
+                android:layout_centerInParent="true"
+
+                android:background="@drawable/rect_stroke"
+
+                android:fontFamily="@font/open_sans"
+                android:hint="Reason to cancel order"
+
+                android:inputType="textMultiLine"
+                android:lines="3"
+
+                android:padding="10dp"
+
+                android:paddingRight="8dp"
+                android:textColor="@color/black"
+
+
+                android:textSize="14dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="Agree to our" />
+
+                <TextView
+android:id="@+id/cancelPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+
+                    android:fontFamily="@font/open_sans"
+                    android:paddingRight="35dp"
+                    android:text="Cancellation policy."
+                    android:textColor="#03A9F4"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+
+
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_below="@+id/iv_image"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+
+                android:background="@drawable/rect_stroke"
+
+                android:backgroundTint="@color/colorPrimaryDark"
+
+                android:fontFamily="@font/open_sans"
+
+                android:gravity="center"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+
+
+                android:text="Proceed"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

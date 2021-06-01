@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EFB609</color>
+    <color name="colorPrimaryDark">#CA9A08</color>
+    <color name="colorAccent">#0EA2E4</color>
+
+    <color name="bt">#2BBBB8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="back">#42CFC8</color>
+    <color name="black">#000000</color>
+    <color name="grey">#7D7D7D</color>
+    <color name="textdark">#E26473</color>
+    <color name="back_light">#FEF0EA</color>
+    <color name="red_light">#E6AAA7</color>
+    <color name="green_light">#C9E79F</color>
+
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+
+
+    <color name="dgreen">#009688</color>
+
+    <color name="dull_white">#F3F3F3</color>
+
+    <color name="dark_grey">#777777</color>
+
+    <color name="dot_dark_screen1">#EBB3B3B3</color>
+
+    <color name="dot_dark_screen2">#EBB3B3B3</color>
+
+    <color name="dot_dark_screen3">#EBB3B3B3</color>
+
+    <color name="dot_dark_screen4">#EBB3B3B3</color>
+
+    <!-- dots active colors -->
+
+
+    <color name="dot_light_screen1">#FFFFFF</color>
+
+    <color name="dot_light_screen2">#FFFFFF</color>
+
+    <color name="dot_light_screen3">#FFFFFF</color>
+
+    <color name="dot_light_screen4">#FFFFFF</color>
+    <color name="womer">#DC0F00</color>
+    <color name="men">#0767B3</color>
+    <color name="kids">#018906</color>
+
+
+    -<array name="array_dot_active">
+
+    <item>@color/dot_light_screen1</item>
+
+    <item>@color/dot_light_screen2</item>
+
+    <item>@color/dot_light_screen3</item>
+
+    <item>@color/dot_light_screen4</item>
+
+</array>
+
+
+    -<array name="array_dot_inactive">
+
+    <item>@color/dot_dark_screen1</item>
+
+    <item>@color/dot_dark_screen2</item>
+
+    <item>@color/dot_dark_screen3</item>
+
+    <item>@color/dot_dark_screen4</item>
+
+</array>
+
+</resources>
