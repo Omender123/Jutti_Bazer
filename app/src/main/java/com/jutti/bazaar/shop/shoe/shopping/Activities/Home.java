@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -56,7 +57,10 @@ import com.jutti.bazaar.shop.shoe.shopping.Product_list.Product_list;
 import com.jutti.bazaar.shop.shoe.shopping.Profile.Profile;
 import com.jutti.bazaar.shop.shoe.shopping.R;
 import com.jutti.bazaar.shop.shoe.shopping.Search.Search;
+import com.jutti.bazaar.shop.shoe.shopping.SharedPreferernce.MyPreferences;
+import com.jutti.bazaar.shop.shoe.shopping.SharedPreferernce.PrefConf;
 import com.jutti.bazaar.shop.shoe.shopping.Utils;
+import com.jutti.bazaar.shop.shoe.shopping.Welcome.DialogueCustom;
 import com.razorpay.Checkout;
 
 import org.json.JSONObject;
@@ -75,7 +79,7 @@ import retrofit2.http.POST;
 //selling
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private static final String TAG ="resp" ;
+    private static final String TAG = "resp";
     LinearLayout contact;
     SharedPreferences sharedPref;
     Boolean yes = false;
@@ -186,11 +190,11 @@ public class Home extends AppCompatActivity
             }
         });
 
-        try {
+      /*  try {
             AppUpdateChecker appUpdateChecker = new AppUpdateChecker(this);  //pass the activity in constructure
             appUpdateChecker.checkForUpdate(false);
         } catch (Exception e) {
-        }
+        }*/
 
 //        contact.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -271,7 +275,51 @@ public class Home extends AppCompatActivity
 //update
         appUpdateManager = AppUpdateManagerFactory.create(getApplicationContext());
         checkUpdate();
+        checkUpdate1();
+
     }
+
+    private void checkUpdate1() {
+        String developer = MyPreferences.getInstance(Home.this).getString(PrefConf.under_development, "");
+        String priority_version_title = MyPreferences.getInstance(Home.this).getString(PrefConf.priority_version_title, "");
+        String priority_version_description = MyPreferences.getInstance(Home.this).getString(PrefConf.priority_version_description, "");
+        String priorversion = MyPreferences.getInstance(Home.this).getString(PrefConf.priority_version, "");
+
+        try {
+            android.content.pm.PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            String version = pInfo.versionName;
+            int verCode = pInfo.versionCode;
+            String device_version = verCode + "" + version;
+            device_version = device_version.replace(".", "");
+            priorversion = priorversion.replace(".", "");
+            //  Toast.makeText(this, priorversion+" "+device_version, Toast.LENGTH_SHORT).show();
+
+            if (Integer.parseInt(priorversion) <= Integer.parseInt(device_version)) {
+                if (developer.equals("false")) {
+                    // Add_1();
+                } else {
+                    DialogueCustom.dialogue_custom(Home.this, "Important Alert",
+                            "The App is under Maintenance",
+                            "We are currently performing server maintenance. We'll be back shortly. Sorry for inconvenience, Please Try Again later",
+                            "GOT IT", "", false, R.drawable.ic_maintenance,
+                            "exit", "", Color.parseColor("#1EBEA5"), Color.parseColor("#FFA1A1A1"));
+                }
+            } else {
+
+                DialogueCustom.dialogue_custom(Home.this, "Update to Continue",
+                        "" + priority_version_title,
+                        "" + priority_version_description,
+                        "Update", "Exit", true, R.drawable.ic_notification,
+                        "Update", "Exit", Color.parseColor("#1EBEA5"), Color.parseColor("#FFA1A1A1"));
+
+            }
+
+        } catch (android.content.pm.PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     private void checkUpdate() {
 
         Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
@@ -349,7 +397,6 @@ public class Home extends AppCompatActivity
         }
 
     }
-
 
 
     @Override

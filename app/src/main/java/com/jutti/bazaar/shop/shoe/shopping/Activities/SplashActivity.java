@@ -22,6 +22,8 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.jutti.bazaar.shop.shoe.shopping.Login_Register.LoginActivity;
 import com.jutti.bazaar.shop.shoe.shopping.R;
+import com.jutti.bazaar.shop.shoe.shopping.SharedPreferernce.MyPreferences;
+import com.jutti.bazaar.shop.shoe.shopping.SharedPreferernce.PrefConf;
 import com.jutti.bazaar.shop.shoe.shopping.Utils;
 import com.jutti.bazaar.shop.shoe.shopping.Welcome.DialogueCustom;
 import com.jutti.bazaar.shop.shoe.shopping.Welcome.WelcomeActivity;
@@ -149,6 +151,17 @@ public class SplashActivity extends AppCompatActivity {
 
                             data_obj = obj.getJSONObject("data");
 
+                            priority_version_title = sharedPref.getString("priority_version_title", "");
+                            priority_version_description = sharedPref.getString("priority_version_description", "");
+                            ad_id_intersticial = sharedPref.getString("ad_id_intersticial", "");
+                            ad_id_banner = sharedPref.getString("ad_id_banner", "");
+                            splash_stages = data_obj.optString("splash_stages");
+
+                            MyPreferences.getInstance(context).putString(PrefConf.under_development,data_obj.optString("under_development"));
+                            MyPreferences.getInstance(context).putString(PrefConf.priority_version_title,priority_version_title);
+                            MyPreferences.getInstance(context).putString(PrefConf.priority_version_description,priority_version_description);
+                            MyPreferences.getInstance(context).putString(PrefConf.priority_version,data_obj.optString("priority_version"));
+
 
                             if (!data_obj.isNull("app_package_name")) {
                                 editorlog.putString("app_package_name", data_obj.optString("app_package_name"));
@@ -268,18 +281,13 @@ public class SplashActivity extends AppCompatActivity {
 
                             editorlog.commit();
 
-                            priority_version_title = sharedPref.getString("priority_version_title", "");
-                            priority_version_description = sharedPref.getString("priority_version_description", "");
-                            ad_id_intersticial = sharedPref.getString("ad_id_intersticial", "");
-                            ad_id_banner = sharedPref.getString("ad_id_banner", "");
-                            splash_stages = data_obj.optString("splash_stages");
 
 //                                if (appinfo_obj.optString("ad_enabled").equals("true")) {
 //                                    // init_ad();
 //                                    //  Toast.makeText(context, ad_id_banner+"  "+ad_id_intersticial+ "  enabled ", Toast.LENGTH_SHORT).show();
 //                                }
 
-                            //compare_appversion(context,data_obj.optString("priority_version"));
+                    //       compare_appversion(context,data_obj.optString("priority_version"));
 
                             //      Toast.makeText(context, ""+appinfo_obj.optString("current_version"), Toast.LENGTH_SHORT).show();
 
@@ -292,14 +300,14 @@ public class SplashActivity extends AppCompatActivity {
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
-                        DialogueCustom.dialogue_custom(context, "Something went Wrong!",
-                                "Aw Snap!!!",
-                                "An unexpected error has occured. We're working to fix it! Sorry for inconvenience, Please Try Again later",
-                                "GOT IT", "", false, R.drawable.nointernet,
-                                "exit", "", Color.parseColor("#1EBEA5"), Color.parseColor("#FFA1A1A1"));
-                        Toast.makeText(context, "" + e.getMessage(), Toast.LENGTH_LONG).show();
                     }
-                } else if (response.code() == 401) {
+                 /*   DialogueCustom.dialogue_custom(context, "Something went Wrong!",
+                            "Aw Snap!!!",
+                            "An unexpected error has occured. We're working to fix it! Sorry for inconvenience, Please Try Again later",
+                            "GOT IT", "", false, R.drawable.nointernet,
+                            "exit", "", Color.parseColor("#1EBEA5"), Color.parseColor("#FFA1A1A1"));
+                    Toast.makeText(context, "" + e.getMessage(), Toast.LENGTH_LONG).show();
+            */    } else if (response.code() == 401) {
                     //  Toast.makeText(HomeActivity.this, "401", Toast.LENGTH_SHORT).show();
                     // Handle unauthorized
                 } else {
